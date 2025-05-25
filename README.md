@@ -28,8 +28,9 @@ This is a backend project built with **FastAPI** that simulates a lightweight ER
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/your_username/mini-inventory-erp.git
-cd mini-inventory-erp
+git clone https://github.com/your_username/inventory-erp.git
+cd inventory-erp
+```
 
 ---
 
@@ -39,11 +40,12 @@ Once the database is initialized, you can start the development server using Uvi
 
 ```bash
 uvicorn app.main:app --reload
+```
 
-This will start the API at:
+This will start the API at:  
 http://localhost:8000
 
-To access the interactive API documentation, go to:
+To access the interactive API documentation, go to:  
 http://localhost:8000/docs
 
 There you can test all endpoints easily through Swagger UI.
