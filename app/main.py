@@ -19,3 +19,8 @@ def get_db():
 @app.post("/products/", response_model=schemas.ProductOut)
 def create_product(product: schemas.ProductCreate, db: Session = Depends(get_db)):
     return crud.create_product(db=db, product=product)
+
+@app.get("/products/", response_model=list[schemas.ProductOut])
+def read_products(db: Session = Depends(get_db)):
+    products = crud.get_products(db)
+    return products
